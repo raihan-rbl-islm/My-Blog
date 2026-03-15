@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "../styles/Card.module.css";
 
 interface CardProps {
     id: number;
@@ -14,12 +13,15 @@ export default function Card({ id, title, date, content }: CardProps) {
             href={`/blog/${id}`}
             style={{ textDecoration: "none", color: "inherit" }}
         >
-            <div className={styles.card}>
-                <h2 className={styles.title}>{title}</h2>
-                <p className={styles.date}>
-                    {new Date(date).toLocaleDateString()}
-                </p>
-                {/* <p className={styles.content}>{content}</p> */}
+            <div
+                style={{
+                    border: "1px solid #ccc",
+                    padding: "1rem",
+                    marginBottom: "1rem",
+                }}
+            >
+                <h2>{title}</h2>
+                <p>{new Date(date).toLocaleDateString()}</p>
             </div>
         </Link>
     );

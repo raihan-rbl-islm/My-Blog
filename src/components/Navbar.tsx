@@ -13,9 +13,15 @@ export default function Navbar() {
                 <h1>Raihan's When to Blog</h1>
             </div>
             <ul>
-                <li style={{ display: "inline", marginRight: "1rem" }}>Home</li>
                 <li style={{ display: "inline", marginRight: "1rem" }}>
-                    <span>About</span>
+                    <Link href="/" style={{ textDecoration: "none" }}>
+                        Home
+                    </Link>
+                </li>
+                <li style={{ display: "inline", marginRight: "1rem" }}>
+                    <Link href="/About" style={{ textDecoration: "none" }}>
+                        About
+                    </Link>
                 </li>
                 <li style={{ display: "inline", marginRight: "1rem" }}>
                     <span>Theme</span>

@@ -15,13 +15,18 @@ export default function Card({ id, title, date, content }: CardProps) {
         >
             <div
                 style={{
-                    border: "1px solid #ccc",
+                    border: "1px solid var(--border)",
+                    backgroundColor: "var(--bg)",
+                    color: "var(--text)",
                     padding: "1rem",
                     marginBottom: "1rem",
+                    borderRadius: "8px",
                 }}
             >
                 <h2>{title}</h2>
-                <p>{new Date(date).toLocaleDateString()}</p>
+                <p style={{ color: "var(--text)", opacity: 0.7 }}>
+                    {new Date(date).toLocaleDateString()}
+                </p>
             </div>
         </Link>
     );
